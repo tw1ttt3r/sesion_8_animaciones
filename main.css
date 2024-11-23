@@ -1,0 +1,160 @@
+:root {
+    --asignation_animation: blacktored;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+.container_img {
+    width: 300px;
+    height: 200px;
+}
+
+div > img {
+    width: 100%;
+    height: 100%;
+}
+
+.container_img:hover {
+    border: 1px red solid;
+    cursor: pointer;
+}
+
+input:focus {
+    width: 200px;
+    outline: none;
+    border: 2px violet dashed;
+}
+
+/* h1:hover {
+    transition-property: color;
+    transition-timing-function: ease-in;
+    transition-duration: 3s;
+    color: red;
+}
+
+h1:not(:hover) {
+    transition-property: color;
+    transition-timing-function: ease-in;
+    transition-duration: 3s;
+    color: black;
+} */
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    height: 500px;
+}
+
+.galeria > .container_img:hover {
+    border: 0;
+}
+
+.galeria > .container_img:nth-child(1):hover {
+    border: 1px pink dashed;
+}
+
+.galeria > .container_img:nth-child(2):hover {
+    padding: 4px;
+}
+
+.galeria > .container_img:nth-child(3):hover {
+    margin: 4px;
+}
+
+.galeria > .container_img:nth-child(4):hover {
+    width: 30%;
+}
+
+.galeria > .container_img:nth-child(5):hover {
+    height: 56%;
+}
+
+.galeria > .container_img:nth-child(6):hover {
+    scale: 200%;
+}
+
+@keyframes blacktored {
+    0% { color: black; }
+    10% { color: yellow; }
+    20% { color: green; }
+    30% { color: brown }
+    40% { color: pink; }
+    50% { color: blue; }
+    60% { color: orange; }
+    70% { color: violet; }
+    80% { color: azure; }
+    90% { color: white; }
+    100% { color: red; }
+}
+
+@keyframes redtoblack {
+    100% { color: black; }
+    90% { color: yellow; }
+    80% { color: green; }
+    70% { color: brown }
+    60% { color: pink; }
+    50% { color: blue; }
+    40% { color: orange; }
+    30% { color: violet; }
+    20% { color: azure; }
+    10% { color: white; }
+    0% { color: red; }
+}
+
+h1 {
+    animation-name: var(--asignation_animation);
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+h3:not(:hover) {
+    animation-name: redtoblack;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+h3:hover {
+    animation-name: blacktored;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes navegando {
+    0% { left: 0px; }
+    100% { left: 800px; }
+}
+
+.oceano {
+    position: relative;
+}
+
+.oceano > .container_img:hover {
+    border: 0;
+}
+
+.oceano > .container_img {
+    position: absolute;
+    animation-name: navegando;
+    animation-duration: 3s;
+}
